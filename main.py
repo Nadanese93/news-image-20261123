@@ -557,7 +557,6 @@ def build():
 def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    os.chmod(out_dir, 0o755)
     img = build()
     path = os.path.join(out_dir, "entry.png")
     size = write_png(img, path)
